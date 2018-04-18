@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>云天互动平台-修改资料</title>
+		<link rel="icon" href="__ROOT__/admin/images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="__ROOT__/admin/css/layui.css" type="text/css" />
+		<!--<link rel="stylesheet" href="__ROOT__/admin/css/index/index.css" type="text/css" />-->
+	</head>
+	<body>
+		<form>
+			<div class="layui-form-item">
+			    <label class="layui-form-label">账号：</label>
+			    <div class="layui-input-block">
+			      <p class="">{$data[0]['account']}</p>
+			    </div>
+			</div>
+			<div class="layui-form-item">
+			    <label class="layui-form-label">昵称：</label>
+			    <div class="layui-input-block">
+			      <input type="text" id="nickname" placeholder="" class="layui-input">
+			    </div>
+			</div>
+			<div class="layui-form-item">
+			    <label class="layui-form-label">头像：</label>
+			    <div class="layui-input-block">
+			      <input type="text" id="face_img" placeholder="" class="layui-input">
+			    </div>
+		   </div>
+			<div class="layui-form-item">
+			    <div class="layui-input-block">
+			      <input type="button" id="modify" class="layui-input" class="layui-btn layui-btn-warm" value="修改资料" />
+			    </div>
+			</div>
+		</form>
+		
+	<script type="text/javascript" src="__ROOT__/admin/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="__ROOT__/admin/layui.all.js" ></script>
+	<script>
+		$('#login').click(function () {
+        	$.ajax({
+        		type:"post",
+        		url: "{:url('admin/index/login')}",
+        		async:true,
+        		data: {
+        			'account': $('#account').val() ,
+        			'password': $('#password').val() 
+        		},
+        		success : function (data) {
+//      			layer.msg(data);
+        			if(data==1){
+        				layer.msg('登陆成功！');
+        				setTimeout(function () {
+        					location.href = '{:url('admin/home/index')}';
+        				},1000)
+        			}else{
+        				layer.msg('登录失败，请检查账号密码！');
+        			}
+        		},
+        		error : function (data) {
+        			console.log('发生了未知错误:'+data);
+        		}
+        	});
+        });
+        setInterval(function () {
+				$.ajax({
+					type:"post",
+					url: "{:url('admin/index/check_login')}",
+					async:true,
+					success : function (data) {
+						if(data == 2){
+							console.log('请先登录后操作');
+						}else if(data == 1){
+							console.log('已登录');
+						}else if(data == 0){
+							console.log('你的账号已在异地登录，请重新登录！');
+//							setTimeout(function () {
+//								location.href = "";
+//							},1000);
+						}
+					}
+				});
+			},20000)
+	</script>
+	
+	</body>
+</html>

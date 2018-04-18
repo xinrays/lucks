@@ -1,0 +1,77 @@
+body{
+	background: url(../../images/index/login_bg2.jpg);
+	width: 100%;
+}
+.bg{
+	position: absolute;
+	top:45%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+   	-moz-transform:translate(-50%, -50%);
+    transform:translate( -50%, -50%);
+}
+.head{
+	width: 350px;
+	height: 60px;
+	margin:0 auto;
+	border-bottom: 1px #fff solid;
+}
+.head p{
+	text-align: center;
+	line-height: 70px;
+	font-size:18px;
+	letter-spacing:3px;
+	color: #000;
+}
+form{
+	background-color: rgba(254,254,254,0.4);
+	width: 400px;
+	height: 280px;
+	border-radius: 4px;
+}
+.layui-form-item{
+	margin:0 auto;
+	width: 350px;
+	padding-top:5px;
+}
+.layui-input-block{
+	margin:0;
+	width: 350px;
+}
+.layui-input, .layui-textarea{
+	border-color: #E6E6E6;
+	border-radius: 2px;
+	height: 42px;
+	font-size: 14px;
+}
+#login{
+	margin-top:-10px;
+	border-color:#999;
+	color: #fff;
+	background: #3CB371;
+}
+.additional{
+	width: 350px;
+	height: 20px;
+	margin: 0 auto;
+	padding-top:10px;
+	color: #fff;
+}
+span a{
+	color: #fff;
+}
+.register{
+	float: left;
+}
+.forget{
+	float:right;
+	border-color: #E6E6E6;
+}
+
+
+
+
+
+
+
+

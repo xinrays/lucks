@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>云天互动平台-登录</title>
+		<link rel="icon" href="__ROOT__/admin/images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="__ROOT__/admin/css/layui.css" type="text/css" />
+		<!--<link rel="stylesheet" href="__ROOT__/admin/css/index/index.css" type="text/css" />-->
+	</head>
+	<body>
+		<form>
+			<div class="layui-form-item">
+			    <!--<label class="layui-form-label"></label>-->
+			    <div class="layui-input-block">
+			      <input type="text" id="account" placeholder="请输入账号.." class="layui-input" />
+			    </div>
+			</div>
+			<div class="layui-form-item">
+			    <!--<label class="layui-form-label"></label>-->
+			    <div class="layui-input-block">
+			      <input type="password" id="password" placeholder="请输入密码.." class="layui-input" />
+			    </div>
+			</div>
+			<div class="layui-form-item">
+			    <!--<label class="layui-form-label"></label>-->
+			    <div class="layui-input-block">
+			      <input type="password" id="confirm" placeholder="请确认密码.." class="layui-input" />
+			    </div>
+			</div>
+			<div class="layui-form-item">
+			    <!--<label class="layui-form-label"></label>-->
+			    <div class="layui-input-block">
+			      <input type="text" id="phone" placeholder="请输入手机号码.." class="layui-input" />
+			    </div>
+			</div>
+			<div class="layui-form-item">
+			    <!--<label class="layui-form-label"></label>-->
+			    <div class="layui-input-block">
+			      <input type="button" id="register" class="layui-input" value="注册" />
+			    </div>
+			</div>
+		</form>
+		<p class="layui-input-block">已有账号？返回<a href="{:url('admin/index/index')}">登录</a></p>
+	<script type="text/javascript" src="__ROOT__/admin/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="__ROOT__/admin/layui.all.js" ></script>
+	<script>
+		$('#register').click(function () {
+        	$.ajax({
+        		type:"post",
+        		url: "{:url('admin/index/check_register')}",
+        		async:true,
+        		data: {
+        			'account': $('#account').val() ,
+        			'password': $('#password').val(),
+        			'confirm': $('#confirm').val(),
+        			'phone': $('#phone').val()
+        		},
+        		success : function (data) {
+        			console.log(data);
+        			if(data==1){
+        				layer.msg('注册成功，亲登录');
+        				setTimeout(function () {
+        					location.href = '{:url('admin/index/index')}';
+        				},1000);
+        			}else if(data==0){
+        				layer.msg('注册失败，请检查填写信息');
+        			}
+        		},
+        		error : function (data) {
+        			console.log('发生了未知错误:'+data);
+        		}
+        	});
+        });
+    </script>
+	</body>
+	
+</html>

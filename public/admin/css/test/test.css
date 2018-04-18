@@ -1,0 +1,52 @@
+.clock{
+	width: 400px;
+	height: 400px;
+	border-radius: 200px;
+	position: absolute;
+	background: url('../../images/test/bg.png');
+	top:45%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+   	-moz-transform:translate(-50%, -50%);
+    transform:translate( -50%, -50%);
+}
+.father{
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	border:1px solid #000;
+	-webkit-transform:translate(-50%, -50%);
+   	-moz-transform:translate(-50%, -50%);
+    transform:translate( -50%, -50%);
+}
+.hour,.minute,.second{
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+}
+.hour{
+	background: url('../../images/test/h.png');
+	-webkit-animation:run 43200s linear 0s infinite;   
+}
+.minute{
+	background: url('../../images/test/m.png');
+	-webkit-animation:run 3927.2727s linear 0s infinite;    
+}
+.second{
+	background: url('../../images/test/s.png');
+	-webkit-animation:run 60s linear 0s infinite;   
+}
+.hour:hover{     
+    -webkit-animation-play-state:paused;     
+}  
+@-webkit-keyframes run{     
+    from{     
+        -webkit-transform:rotate(0deg);     
+    }     
+    to{     
+        -webkit-transform:rotate(360deg);     
+    }     
+}

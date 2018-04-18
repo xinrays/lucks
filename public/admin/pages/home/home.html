@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>云天互动平台-商户主页</title>
+    <link rel="icon" href="__ROOT__/admin/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__ROOT__/admin/css/layui.css" type="text/css" />
+    <link rel="stylesheet" href="__ROOT__/admin/css/home/home.css" type="text/css" />
+    <link href="__ROOT__/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="__ROOT__/admin/font-awesome-3.2.1/css/font-awesome.css" type="text/css">-->
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin hea">
+	  <div class="layui-header">
+	    <div class="layui-logo">云天互动系统</div>
+	    <!-- 头部区域（可配合layui已有的水平导航） -->
+	    <ul class="layui-nav layui-layout-left">
+	      <li class="layui-nav-item"><a href="">我的活动</a></li>
+	      <li class="layui-nav-item"><a href="">个人中心</a></li>
+	      <li class="layui-nav-item"><a href="">我的订单</a></li>
+	      <li class="layui-nav-item">
+	        <a href="javascript:;">其它系统</a>
+	        <dl class="layui-nav-child">
+	          <dd><a href="">邮件管理</a></dd>
+	          <dd><a href="">消息管理</a></dd>
+	          <dd><a href="">授权管理</a></dd>
+	        </dl>
+	      </li>
+	    </ul>
+	    <ul class="layui-nav layui-layout-right">
+	      <li class="layui-nav-item">
+	        <a href="javascript:;">
+	          <img src="__ROOT__/admin/images/home/ttw.jpg" class="layui-nav-img">
+	         	 铁头娃
+	        </a>
+	        <dl class="layui-nav-child">
+	          <dd><a href="">基本资料</a></dd>
+	          <dd><a href="">安全设置</a></dd>
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item"><a href="">注销</a></li>
+	    </ul>
+	  </div>
+	  
+	  <div class="layui-side">
+	  	<div class="layui-side-scroll">
+	  		<div class="user">
+	  			<ul>
+	  				<li class="img"><a href="#"><img src="__ROOT__/admin/images/home/ttw.jpg" alt="头像出错"/></a></li>
+	  				<li class="nickname"><a href="#">铁头娃</a></li>
+	  				<li class="personal"><a href="#">个人中心</a></li>
+	  			</ul>
+	  		</div>
+	      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+	      <ul id="left-nav" class="layui-nav layui-nav-tree" >
+	      	<li>
+	      		<a href="javascript:" class="title-left">
+	      			<i class="fa fa-star"></i>
+	      			活动
+	      		</a>
+	      	</li>
+	      	<li><a href="#">我的活动</a></li>
+	      	<li>
+	      		<a href="javascript:" class="title-left">
+	      			<i class="fa fa-shopping-cart"></i>
+	      			订单
+	      		</a>
+	      	</li>
+	      	<li><a href="#">我的订单</a></li>
+	      	<li>
+	      		<a href="javascript:" class="title-left">
+		      		<i class="fa fa-user-circle"></i>
+		      		账户
+	      		</a>
+	      	</li>
+	      	<li><a href="#">我的账户</a></li>
+	      	<li><a href="#">红包账户</a></li>
+	      	<li><a href="#">个人账户</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	 	<!--body-->
+	  <div class="layui-body">
+	    <!-- 内容主体区域 -->
+	    <div style="padding: 15px;">
+	    	<ul class="body-nav">
+	    		<li>
+	    			<a href="#">
+	    				<i class="fa fa-hourglass"></i>
+	    				全部活动
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<i class="fa fa-hourglass-half"></i>
+	    				正在进行
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<i class="fa fa-hourglass-start"></i>
+	    				未开始
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<i class="fa fa-hourglass-end"></i>
+	    				已结束
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    				<i class="fa fa-trash-o"></i>
+	    				活动回收站
+	    			</a>
+	    		</li>
+	    		<li>
+	    			<a href="#">
+	    			<i class="fa fa-plus"></i>
+	    				新建活动
+	    			</a>
+	    		</li>
+	    	</ul>
+	    	
+	    	<div class="body-search">
+	    		<p>
+	    			<span>活动筛选</span>
+	    		</p>
+	    		<form class="layui-form">
+	    			<div class="layui-form-item">
+					    <label class="layui-form-label">搜索项1：</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" required  lay-verify="required" placeholder="请输入搜索内容.." autocomplete="off" class="layui-input">
+					    </div>
+					  </div>
+					  <div class="layui-form-item">
+					    <label class="layui-form-label">搜索项2：</label>
+					    <div class="layui-input-block">
+					      <input type="text" name="title" required  lay-verify="required" placeholder="请输入搜索内容.." autocomplete="off" class="layui-input">
+					    </div>
+					  </div>
+					  <div class="layui-form-item">
+					    <div class="layui-input-block">
+					      <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+					      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					    </div>
+					  </div>
+	    		</form>
+	    	</div>
+	    	<div class="body-activities">
+	    	<ul class="body-activities-box">
+	    		<li>
+	    			<ul class="body-activities-box-left">
+	    				<li><p>已结束</p></li>
+	    				<li><p>2018-04-09</p></li>
+	    				<li><p>18:15:00</p></li>
+	    				<li><p>至2018-04-11 23:59:00</p></li>
+	    			</ul>
+	    			<ul class="body-activities-box-right">
+	    				<li>
+	    					<ul class="body-activities-box-left-new">
+	    						<li>铁头娃的活动</li><br />
+			    					<ul class="body-activities-box-left-new-content">
+			    						<li>
+			    							<p>
+			    								<span>参与人数</span>
+			    								<span>5555人</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>签到人数</span>
+			    								<span>345人</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>上墙消息</span>
+			    								<span>345条</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>霸屏上墙消息</span>
+			    								<span>0条</span>
+			    							</p>
+			    						</li>
+			    					</ul>	
+	    					</ul>
+	    					<div class="body-activities-box-left-option">
+		    					<ul>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>编辑活动</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>管理活动</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>活动二维码</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>删除活动</p>
+		    							</a>
+		    						</li>
+		    					</ul>
+	    					</div>	
+	    				</li>
+	    			</ul>
+	    		</li>
+	    		<!--活动-->
+	    		<li>
+	    			<ul class="body-activities-box-left">
+	    				<li><p>已结束</p></li>
+	    				<li><p>2018-04-09</p></li>
+	    				<li><p>18:15:00</p></li>
+	    				<li><p>至2018-04-11 23:59:00</p></li>
+	    			</ul>
+	    			<ul class="body-activities-box-right">
+	    				<li>
+	    					<ul class="body-activities-box-left-new">
+	    						<li>铁头娃的活动</li><br />
+			    					<ul class="body-activities-box-left-new-content">
+			    						<li>
+			    							<p>
+			    								<span>参与人数</span>
+			    								<span>5555人</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>签到人数</span>
+			    								<span>345人</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>上墙消息</span>
+			    								<span>345条</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>霸屏上墙消息</span>
+			    								<span>0条</span>
+			    							</p>
+			    						</li>
+			    					</ul>	
+	    					</ul>
+	    					<div class="body-activities-box-left-option">
+		    					<ul>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>编辑活动</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>管理活动</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>活动二维码</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>删除活动</p>
+		    							</a>
+		    						</li>
+		    					</ul>
+	    					</div>	
+	    				</li>
+	    			</ul>
+	    		</li>
+	    		<!--活动-->
+	    		<li>
+	    			<ul class="body-activities-box-left">
+	    				<li><p>已结束</p></li>
+	    				<li><p>2018-04-09</p></li>
+	    				<li><p>18:15:00</p></li>
+	    				<li><p>至2018-04-11 23:59:00</p></li>
+	    			</ul>
+	    			<ul class="body-activities-box-right">
+	    				<li>
+	    					<ul class="body-activities-box-left-new">
+	    						<li>铁头娃的活动</li><br />
+			    					<ul class="body-activities-box-left-new-content">
+			    						<li>
+			    							<p>
+			    								<span>参与人数</span>
+			    								<span>5555人</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>签到人数</span>
+			    								<span>345人</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>上墙消息</span>
+			    								<span>345条</span>
+			    							</p>
+			    						</li>
+			    						<li>
+			    							<p>
+			    								<span>霸屏上墙消息</span>
+			    								<span>0条</span>
+			    							</p>
+			    						</li>
+			    					</ul>	
+	    					</ul>
+	    					<div class="body-activities-box-left-option">
+		    					<ul>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>编辑活动</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>管理活动</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>活动二维码</p>
+		    							</a>
+		    						</li>
+		    						<li>
+		    							<a href="#">
+			    							<i class="layui-icon">&#xe68e;</i>
+			    							<p>删除活动</p>
+		    							</a>
+		    						</li>
+		    					</ul>
+	    					</div>	
+	    				</li>
+	    			</ul>
+	    		</li>
+	    	</ul>
+	    </div>
+	    </div>
+	  </div>
+	  <!--body-->
+	  <div class="layui-footer">
+	    <!-- 底部固定区域 -->
+	    © layui.com - 底部固定区域
+	  </div>
+	</div>
+<script type="text/javascript" src="__ROOT__/admin/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="__ROOT__/admin/layui.all.js" ></script>
+<script>
+//JavaScript代码区域
+layui.use('element', function(){
+  var element = layui.element;
+  
+});
+
+</script>
+</body>
+</html>
